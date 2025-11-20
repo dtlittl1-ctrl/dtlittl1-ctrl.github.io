@@ -1,0 +1,187 @@
+* {
+    --orange: #EF8354;
+    --darkblue: #2D3142;
+    --darkgrey: #4F5D75;
+    --lightgrey: #BFC0C0;
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 2rem;
+}
+
+.container-content {
+    position: relative;
+    left: 25vw;
+    padding: 36px;
+    margin: 24px;
+    width: 65vw;
+    font-size: 2rem;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+#heading {
+    color: var(--orange);
+    font-family: "DM Serif Display", serif;
+    font-size: 7rem;
+    line-height: 134px;
+    text-transform: uppercase;
+}
+
+nav {
+    background-color: var(--orange);
+    font-family: "DM Sans", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    font-size: 3rem;
+    z-index: 9;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.navStyle.nav-hidden {
+    transform: translateX(-100%);
+}
+
+nav ul {
+    margin: 121px 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 9px;
+}
+
+#menu {
+    position: fixed;
+    top: 60px;
+    left: calc(20vw/2);
+    width: 60px;
+    height: 60px;
+    background-color: var(--lightgrey);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#menu span {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navStyle ul li a,
+a:visited {
+    color: var(--darkblue);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+h1 {
+    color: var(--darkgrey);
+    font-family: "DM Serif Display", serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.description {
+    font-family: "DM Sans", sans-serif;
+    color: #2D3142;
+    font-size: 2rem;
+    line-height: 36px;
+}
+
+.description div {
+    font-size: 2rem;
+}
+
+.description ul {
+    list-style: "▶ ";
+}
+
+.description ul li a {
+    font-family: "DM Sans";
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--orange);
+    background-color: var(--darkblue);
+    text-decoration: none;
+}
+
+.description ul li a:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+strong {
+    color: var(--orange);
+    background-color: var(--darkblue);
+    font-weight: 800;
+}
+
+i {
+    color: var(--orange);
+    background-color: var(--darkblue);
+}
+
+.description div::first-letter {
+    font-family: "DM Serif Display";
+    font-size: 60px;
+    font-style: italic;
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+}
+
+.container-content.content-full {
+    left: 0;
+    width: 100vw;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+
+    #menu {
+        top: 16px;
+        left: 16px;
+        z-index: 1001;
+    }
+
+    nav {
+        width: 100vw;
+        height: 100vh;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .navStyle.nav-hidden {
+        transform: translateX(-100%);
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        height: 100%;
+    }
+
+    .container-content,
+    .container-content.content-full {
+        left: 0;
+        width: 100vw;
+        margin: 0;
+        padding: 36px;
+    }
+}
