@@ -1,3 +1,4 @@
+
 const galleryImages = [
   "IMG_2349.png",
   "IMG_2350.png",
@@ -11,7 +12,7 @@ const galleryImages = [
   "IMG_0451.png",
   "IMG_0973.png",
   "IMG_0980.png",
-  "IMG_1001.png"
+  "IMG_1001.png",
 ];
 
 const galleryMainImg = document.getElementById("gallery-image");
@@ -23,7 +24,7 @@ const galleryNextBtn = document.getElementById("gallery-next");
 let galleryIndex = 0;
 
 function updateGalleryImages() {
-  if (!galleryMainImg) return;
+  if (!galleryMainImg) return; // not on gallery page
 
   const total = galleryImages.length;
   const current = galleryIndex;
@@ -32,12 +33,8 @@ function updateGalleryImages() {
 
   galleryMainImg.src = galleryImages[current];
 
-  if (galleryPrevImg) {
-    galleryPrevImg.src = galleryImages[prev];
-  }
-  if (galleryNextImg) {
-    galleryNextImg.src = galleryImages[next];
-  }
+  if (galleryPrevImg) galleryPrevImg.src = galleryImages[prev];
+  if (galleryNextImg) galleryNextImg.src = galleryImages[next];
 }
 
 if (galleryMainImg && galleryPrevBtn && galleryNextBtn) {
