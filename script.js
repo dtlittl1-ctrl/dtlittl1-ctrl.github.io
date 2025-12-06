@@ -1,17 +1,17 @@
 const galleryImages = [
-  "gallery-images/IMG_2349.png",
-  "gallery-images/IMG_2350.png",
-  "gallery-images/IMG_2357.png",
-  "gallery-images/IMG_1359.png",
-  "gallery-images/IMG_1515.png",
-  "gallery-images/IMG_1998.png",
-  "gallery-images/IMG_0143.png",
-  "gallery-images/IMG_0144.png",
-  "gallery-images/IMG_0209.png",
-  "gallery-images/IMG_0451.png",
-  "gallery-images/IMG_0973.png",
-  "gallery-images/IMG_0980.png",
-  "gallery-images/IMG_1001.png"
+  "IMG_2349.png",
+  "IMG_2350.png",
+  "IMG_2357.png",
+  "IMG_1359.png",
+  "IMG_1515.png",
+  "IMG_1998.png",
+  "IMG_0143.png",
+  "IMG_0144.png",
+  "IMG_0209.png",
+  "IMG_0451.png",
+  "IMG_0973.png",
+  "IMG_0980.png",
+  "IMG_1001.png"
 ];
 
 const galleryMainImg = document.getElementById("gallery-image");
